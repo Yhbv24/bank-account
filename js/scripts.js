@@ -31,7 +31,7 @@ $(function() {
     var balance = parseFloat($("#init-deposit").val());
     var newAccount = new Account(name, balance);
 
-    $("#log").append("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.initDeposit(balance).toFixed(2) + "</li>");
+    $("#log").prepend("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.initDeposit(balance).toFixed(2) + "</li>");
 
     $("#deposit-send").click(function() {
       var depositAmount = parseFloat($("#deposit").val());
@@ -43,7 +43,7 @@ $(function() {
 
       newAccount.deposit(depositAmount);
 
-      $("#log").append("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.balance.toFixed(2) + " | Deposited: $" + depositAmount.toFixed(2) + "</li>");
+      $("#log").prepend("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.balance.toFixed(2) + " | Deposited: $" + depositAmount.toFixed(2) + "</li>");
 
       $("#deposit").val("")
     });
@@ -58,7 +58,7 @@ $(function() {
 
       newAccount.withdraw(withdrawAmount);
 
-      $("#log").append("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.balance.toFixed(2) + " | Withdrew: $" + withdrawAmount.toFixed(2) + "</li>");
+      $("#log").prepend("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.balance.toFixed(2) + " | Withdrew: $" + withdrawAmount.toFixed(2) + "</li>");
 
       $("#withdraw").val("")
     });
