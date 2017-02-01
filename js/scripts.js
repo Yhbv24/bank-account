@@ -28,5 +28,20 @@ $(function() {
     var newAccount = new Account(name, balance);
 
     $("#log").append("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.initDeposit(balance).toFixed(2) + "</li>");
+
+    $("#deposit-send").click(function() {
+      var depositAmount = parseFloat($("#deposit").val());
+      newAccount.deposit(depositAmount);
+
+      $("#log").append("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.balance.toFixed(2) + "</li>");
+    });
+
+    $("#withdraw-send").click(function() {
+      var withdrawAmount = parseFloat($("#withdraw").val());
+      newAccount.withdraw(withdrawAmount);
+
+      $("#log").append("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.balance.toFixed(2) + "</li>");
+    });
   });
+
 });
