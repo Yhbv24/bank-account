@@ -12,8 +12,8 @@
       <h1 class="jumbotron">Welcome to Laidlaw Bank.</h1>
       <h3>Please add an initial deposit, and feel free to withdraw and deposit your money.</h3><br>
 
-      <form id="bank-form">
-        <div class="row">
+      <div class="row">
+        <form id="bank-form">
           <div class="col-md-6">
             <div class="form-group">
               <label for="name">Name:</label><br>
@@ -24,34 +24,30 @@
               <label for="init-deposit">Initial Deposit:</label><br>
               <input type="text" name="init-deposit" id="init-deposit">
             </div>
-          </div>
 
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="deposit">Deposit Amount:</label><br>
-              <input type="text" name="deposit" id="deposit">
-            </div>
-
-            <div class="form-group">
-              <label for="withdraw">Withdrawal Amount:</label><br>
-              <input type="text" name="withdraw" id="withdraw">
-            </div>
-          </div>
-
-          <div class="col-md-6">
             <div class="form-group">
               <br><button type="submit" class="btn">Submit</button>
             </div>
           </div>
+        </form>
 
-          <div class="col-md-6">
-            <div class="form-group">
-              <br><button type="button" id="deposit-send" class="btn">Deposit</button>
-              <button type="button" id="withdraw-send" class="btn">Withdraw</button>
-            </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="deposit">Deposit Amount:</label><br>
+            <input type="text" name="deposit" id="deposit">
+          </div>
+
+          <div class="form-group">
+            <label for="withdraw">Withdrawal Amount:</label><br>
+            <input type="text" name="withdraw" id="withdraw">
+          </div>
+
+          <div class="form-group">
+            <br><button type="button" id="deposit-send" class="btn">Deposit</button>
+            <button type="button" id="withdraw-send" class="btn">Withdraw</button>
           </div>
         </div>
-      </form>
+      </div>
 
       <div class="row">
         <div class="col-md-12">
