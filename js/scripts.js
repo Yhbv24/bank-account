@@ -26,4 +26,7 @@ $(function() {
     var name = $("#name").val();
     var balance = parseFloat($("#init-deposit").val());
     var newAccount = new Account(name, balance);
+
+    $("#log").append("<li>Name: " + newAccount.name + " | Balance: $" + newAccount.initDeposit(balance).toFixed(2) + "</li>");
+  });
 });
